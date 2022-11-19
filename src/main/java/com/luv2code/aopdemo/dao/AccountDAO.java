@@ -11,7 +11,11 @@ public class AccountDAO {
     private String serviceCode;
 
     //  add a new method: findAccounts()
-    public List<Account> findAccounts(){
+    public List<Account> findAccounts(boolean tripWire){
+        //  for academic purpose .. simulate an exception
+        if (tripWire==true){
+            throw new RuntimeException("No soup for youuuu!!!");
+        }
         List<Account>myAccounts=new ArrayList<>();
 
         //  create sample accounts
